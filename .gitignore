@@ -1,0 +1,16 @@
+dist/
+node_modules/
+.env
+.DS_Store
+.vscode/
+.idea/
+*.log
+*.tmp
+coverage/
+build/
+.claude
+.cache/
+*.bak
+*.swp
+thumbs.db
+*.class

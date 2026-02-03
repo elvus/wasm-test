@@ -1,0 +1,31 @@
+{
+  "name": "wasm",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "gen:types": "jco guest-types wit -o generated/types",
+    "build:ts": "rolldown -c rolldown.config.mjs",
+    "build:component": "jco componentize -w wit -o dist/component.wasm dist/component.js",
+    "build": "pnpm run gen:types && pnpm run build:ts && pnpm run build:component",
+    "transpile": "jco transpile -o dist/transpiled dist/component.wasm",
+    "serve": "jco serve dist/component.wasm",
+    "demo": "node scripts/demo.mjs",
+    "all": "pnpm run build && pnpm run demo"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "packageManager": "pnpm@10.28.2",
+  "devDependencies": {
+    "@bytecodealliance/componentize-js": "^0.19.3",
+    "@bytecodealliance/jco": "^1.15.4",
+    "@bytecodealliance/jco-std": "^0.1.1",
+    "rolldown": "1.0.0-rc.1"
+  },
+  "dependencies": {
+    "hono": "^4.11.7",
+    "typescript": "^5.9.3"
+  }
+}
