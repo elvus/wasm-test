@@ -118,7 +118,7 @@ curl http://localhost:8080/hello
 El comando `wasmtime serve` inicia un servidor HTTP que enruta las solicitudes al handler exportado por el componente WASM.
 
 > [!NOTE]
-> Los endpoints que realizan requests HTTP salientes (como `/users`) pueden no funcionar correctamente con `wasmtime serve` debido a limitaciones en la capa > de red de WASI. Los endpoints síncronos como `/hello` y `/post` funcionan sin problemas.
+> Los endpoints que realizan requests HTTP salientes (como `/users`) pueden no funcionar correctamente con `wasmtime serve` debido a limitaciones en la capa de red de WASI. Los endpoints síncronos como `/hello` y `/post` funcionan sin problemas.
 
 ## Arquitectura
 
